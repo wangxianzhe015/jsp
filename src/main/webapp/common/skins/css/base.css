@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+/*reset*/
+body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,form,table,th,td,input,textarea,a{margin:0; padding:0;}
+body{font-size:12px; line-height:150%; font-family:Arial,SimSun; color:#3c3c3c; background-image:url(../images/bg1.png); overflow-x:hidden;}
+h1,h2,h3,h4,h5,h6{font-size:14px;}
+img{border:0;}
+ul,li{list-style:none;}
+em,i{font-style:normal}
+b{font-weight:normal;}
+a{text-decoration:none; color:#3c3c3c; outline:none;}
+a:hover{text-decoration:underline; color:#000;}
+/*default*/
+.fl{float:left;}
+.fr{float:right;}
+.clear{clear:both;}
+.clearfix:after{content:"."; height:0; font-size:0; clear:both; display:block; visibility:hidden;}
+.clearfix{*zoom:1;}
+.left{text-align:left;}
+.right{text-align:right;}
+.center{text-align:center;}
+.ml5{margin-left:5px;}
+.mr5{margin-right:5px;}
+.mt5{margin-top:5px;}
+.mb5{margin-bottom:5px;}
+.ml10{margin-left:10px;}
+.mr10{margin-right:10px;}
+.mt10{margin-top:10px;}
+.mb10{margin-bottom:10px;}
+.mb40{margin-bottom:40px;}

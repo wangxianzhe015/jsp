@@ -1,0 +1,116 @@
+body {
+	background: #fff;
+	color: #808080;
+	padding: 0px;
+	margin: 0px;
+	font-family: Microsoft YaHei, "ÀŒÃÂ";
+	font-size: 14px;
+}
+
+a {
+	outline: none;
+	text-decoration: none;
+	color: #B1191A;
+	cursor: pointer;
+}
+
+.main {
+	margin: 20px auto;
+	width: 1000px;
+	clear: both;
+	position: relative;
+}
+
+.userSideBar {
+	overflow: hidden;
+}
+
+.fl {
+	float: left;
+}
+
+.userRight {
+	width: 780px;
+}
+
+.fr {
+	float: right;
+}
+
+.ui-side-item {
+	background: #ececec;
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.ui-side-item.active .ui-side-item-link,.ui-side-item.active .ui-side-item-link:hover
+	{
+	background: #ea544a;
+	color: #fff;
+	cursor: default;
+}
+
+.ui-side-item.active .ui-side-item-link,.ui-side-item.active .ui-side-item-link:hover
+	{
+	background: #ea544a;
+	color: #fff;
+	cursor: default;
+}
+
+.ui-side-item .ui-side-item-link:hover {
+	background: #ea544a;
+	color: #fff;
+}
+
+.ui-side-item-link:hover .ui-icon-mid.index,.ui-side-item.active .ui-icon-mid.index
+	{
+	background: url(../images/sidebar-icons.png) no-repeat
+		-20px 0;
+}
+
+.ui-side-sub-item.active a.ui-side-sub-item-link,.ui-side-sub-item a.ui-side-sub-item-link:hover
+	{
+	background: #ea544a;
+	color: #fff;
+}
+
+a.ui-side-sub-item-link {
+	border-bottom: 1px solid #f2f2f2;
+	color: #909090;
+	cursor: pointer;
+	display: block;
+	height: 36px;
+	line-height: 36px;
+	margin-left: 10px;
+	padding-left: 30px;
+}
+
+.ui-icon-mid {
+	margin-top: 15px;
+	margin-right: 8px;
+	height: 20px;
+	width: 20px;
+	display: inline-block;
+}
+
+li {
+	list-style: none;
+}
+
+/*≤‡±ﬂ¿∏πÃ∂®*/
+.fixed{position:fixed; top:20px;}
+
+
+/*Õ≈∂”ΩÈ…‹*/
+.teamIntro{ width:780px; border-bottom:20px solid #efefef; padding-bottom:40px;}
+.teamIntro p{font-size:14px; font-weight:bold; text-align:center;}
+
+
+.ceoIntro{width:780px; padding-top:40px; padding-bottom:40px;}
+.ceoPic{display:block; margin:0 auto; padding-bottom:8px;}
+.ceoName{margin: 0 auto;font-size:16px; font-weight:bold; text-align:center;}
+
+.member{width:780px; padding-top:40px; border-top:20px solid #efefef; padding-top:0px; overflow:hidden; border-bottom:20px solid #efefef; padding-bottom:40px;}
+.memberfr{width:390px; padding-top:40px; border-right:20px solid #efefef; padding-bottom:40px; float:left; display:block;}
+.memberPic{display:block; margin:0 auto; padding-bottom:8px;}
+.memberName{margin: 0 auto;font-size:16px; font-weight:bold; text-align:center; padding-bottom:40px;}
+.memberfr-r{width:360px; padding-top:40px; float:left; display:block; margin-left:10px;}

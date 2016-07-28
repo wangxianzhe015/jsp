@@ -1,0 +1,126 @@
+.register{
+	border: 1px solid #ccc;
+	border-top:  3px solid #ccc;
+	height: 340px;
+	margin-top: 50px;
+}
+
+.register_title{
+	font-size: 22px;
+  	font-weight: bold;
+ 	margin-left: 200px;
+ 	line-height: 50px;
+}
+
+#form1{
+	margin-left: 30px;
+}
+
+
+.register_input{
+	width: 265px;
+  	height: 34px;
+  	border: 1px solid #ccc;
+  	border-radius: 5px;
+  	margin: 8px;
+  	padding-left: 10px;
+  	font-size: 14px;
+  	line-height: 14px;
+  	line-height: 34px\9;
+}
+
+
+.btn_zhuce{
+	width: 170px;
+	background: #ea544a;
+	font-size: 20px;
+	color: #fff;
+	margin-left: 98px;
+	cursor: pointer;
+}
+
+
+.btn_yzm_div{
+	float: right;
+  	width: 105px;
+  	height: 34px;
+  	margin-right: 15px;
+  	_margin-right: 0px;
+  	_float: right;
+  	_width: 100px;
+
+}
+
+.btn_yzm{
+	width: 100%;
+	height: 100%;
+  	cursor: pointer;
+  	outline: none;
+  	padding-left: 0px;
+  	margin-top: 9px;
+  	background: #f63;
+  	color: #fff;
+  	border: none;
+}
+
+.register_right{
+	height:440px; 
+	margin-left:8px;
+	text-align: center;
+}
+
+.register_right_title{
+	color: #c12000;
+	/*padding-top: 140px;*/
+	padding-top: 108px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.register_right_p{
+	text-align: center;
+	font-size: 18px;
+	line-height: 40px;
+}
+
+.btn_denglu{
+	width: 200px;
+	background: #ea544a;
+	font-size: 20px;
+	color: #fff;
+	padding: 10px 0;
+	*padding: 3px 0;
+	margin-top: 40px;
+	cursor: pointer;
+}
+
+.yanzheng_a{
+	width: 64px;
+	margin-right: 10px;
+}
+.yanzheng_a:hover{
+	color: #F63;
+}
+.yanzheng_img{
+	margin-left: 13px;
+	margin-top: 7px;
+	margin-top: 9px;
+}
+
+#xieyi:hover{
+	color: #DB4F33;
+}
+
+
+/*Õë¶Ô»ðºüµ÷ÊÔµ¯¿òÑùÊ½*/
+.aui_c,.aui_dialog{ width: 400px;}
+
+
+/*µÇÂ¼Ò³Ãæ*/
+.forget_pw{
+	padding-left: 8px;
+}
+.forget_pw:hover{
+	color: #DB4F33;
+}

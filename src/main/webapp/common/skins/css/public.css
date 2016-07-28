@@ -1,0 +1,328 @@
+/**********iframe鍐呯殑鏍峰紡**************************/
+div.grid {
+	border: 1px solid #ccc;
+	font-size: 13px;
+	padding: 0 1px;
+	position: relative;
+}
+
+.grid a {
+	color: #666;
+	text-align: center;
+}
+
+.grid_head {
+	background-color: #ebeaef;
+	height: 30px;
+	line-height: 30px;
+	position: relative;
+	color: #666;
+	padding: 0 5px;
+}
+
+.grid_head .head_left {
+	float: left;
+}
+
+.grid_head .head_right {
+	float: right;
+}
+
+.grid_head .head_right a {
+	width: auto;
+	float: left;
+	margin: 0 5px 0 5px;
+	padding: 0 5px;
+	color: #666;
+}
+
+.grid_head .head_right a:HOVER {
+	background-color: #ccc;
+}
+
+.grid_body {
+	border: none;
+	padding-top: 5px;
+}
+
+/*鑷畾涔夋寜閽殑鏍峰紡*/
+.grid_body a.sub,a.reset,a.return {
+	width: auto;
+	height: 20px;
+	line-height: 20px;
+	padding: 1px 10px;
+	display: inline-block;
+	color: #666;
+	border: 1px solid #aaa;
+}
+
+.grid_body table {
+	width: 100%;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	font-size: 12px;
+}
+
+.grid_body table tbody a:HOVER {
+	text-decoration: underline;
+	color: #1c5ea0;
+}
+
+.grid_body table tfoot td {
+	text-align: center;
+}
+
+.grid_body table tfoot td a:HOVER {
+	background-color: #ccc;
+}
+
+.grid_body table td {
+	border: 1px solid #ccc;
+	border-width: 1px 0 0 1px;
+	height: 30px;
+}
+
+.grid_body table tr.odd {
+	background: #eff1f3;
+}
+
+.grid_body table tr.hover {
+	background: #dde3e7;
+}
+
+.grid_body table tr.current {
+	background: #e1f1ff;
+}
+
+.grid_body table td.left {
+	text-align: left;
+}
+
+.grid_body table td.right {
+	text-align: right;
+}
+
+.grid_body table td.center {
+	text-align: center;
+}
+
+.grid_body table thead {
+	background-color: #d8d8d8;
+	color: #666;
+}
+
+.grid_body table th {
+	border: 1px solid #ccc;
+	border-width: 1px 0 0 1px;
+	/****杩欓噷娉ㄦ剰****/
+	height: 25px;
+	line-height: 25px;
+	color: #666;
+}
+
+.grid_foot {
+	background-color: #ebeaef;
+	height: 30px;
+	position: relative;
+	color: #666;
+	margin: 5px 0 0 0;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.grid_foot .foot_left {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	padding-right: 10px;
+}
+
+.grid_foot .foot_right {
+	float: right;
+	height: 30px;
+	line-height: 30px;
+}
+
+.grid_foot .foot_right a {
+	width: 50px;
+	float: left;
+	display: inline;
+}
+
+.grid_foot .foot_right a:HOVER {
+	background-color: #ccc;
+}
+
+/********************************/
+.pop_tree {
+	position: absolute !important;
+	border: 1px solid #aaa;
+	width: 300px;
+	height: 325px;
+	background-color: #fff;
+	display: none;
+}
+
+/*楂�px*/
+.pop_head {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 25px;
+	background-color: #ebeaef;
+	width: 100%;
+	border-bottom: 1px solid #aaa;
+	line-height: 25px;
+	text-align: center;
+	font-weight: bold;
+}
+
+/*楂�px*/
+.pop_foot {
+	position: absolute;
+	height: 30px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #fff;
+	text-align: center;
+	padding-top: 5px;
+	border-top: 1px solid #aaa;
+}
+
+/*270px?*/
+.pop_body {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 25px;
+	bottom: 30px;
+	width: 100%;
+	background-color: #fff;
+}
+
+.pop_body iframe {
+	height: 100%;
+	width: 100%;
+	border: none;
+	overflow: auto;
+}
+
+/********************/
+.a_container {
+	border: 1px solid #ccc;
+	position: relative;
+	margin: 10px;
+	padding: 10px;
+}
+
+.a_container_top {
+	background-color: #d8d8d8;
+	color: #666;
+	width: 100%;
+	height: 30px;
+	margin-bottom: 5px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 30px;
+}
+
+.a_container table {
+	border: none;
+	margin-bottom: 10px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.a_container table thead {
+	background-color: #d8d8d8;
+	text-align: left;
+}
+
+.a_container table tbody tr.selected {
+	background-color: #dde3e7;
+}
+
+.a_container table td,.a_container table th {
+	border: 1px solid #ccc;
+	border-width: 1px 0 0 1px;
+	color: #666;
+	font-size: 12px;
+	height: 22px;
+	line-height: 22px;
+	padding-left: 2px;
+}
+
+.a_container_left {
+	width: 30%;
+	border: 1px solid #ccc;
+	float: left;
+	position: relative;
+	height: 450px;
+	margin-right: 10px;
+}
+
+.a_container_right {
+	border: 1px solid #ccc;
+	height: 450px;
+	position: relative;
+	overflow: auto;
+}
+
+/*澶翠俊鎭�*/
+.a_container_right .memo_head {
+	height: 20px;
+	position: relative;
+	border-bottom: 1px solid #666;
+}
+
+/*鍑犱釜鏍戠殑鏄剧ず鏍峰紡*/
+.a_container_right #selectFuncTree,.a_container_right #showMdTree {
+	height: 426px;
+	overflow: auto;
+	position: relative;
+}
+
+.ac_head {
+	position: relative;
+	height: 30px;
+	background-color: #ebeaef;
+	border-bottom: 1px solid #aaa;
+	line-height: 30px;
+	text-align: left;
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+.ac_foot {
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	padding-top: 5px;
+	background-color: #fff;
+	line-height: 30px;
+}
+
+.ac_memo {
+	position: absolute;
+	bottom: 0;
+	z-index: 1000;
+	height: 100px;
+	width: 100%;
+	border: 1px solid #ccc;
+	border-width: 1px 0 0 0;
+	padding: 5px;
+	/*overflow-x: hidden;
+	overflow-y: auto;*/
+}
+
+.ac_body {
+	padding-top: 5px;
+	position: relative;
+	width: 100%;
+	background-color: #fff;
+	border: none;
+}

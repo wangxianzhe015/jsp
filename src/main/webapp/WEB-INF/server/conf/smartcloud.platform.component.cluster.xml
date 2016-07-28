@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain name="Domain" timestamp="1381307175078" interval="5000" timeout="5000" adminServerIP="127.0.0.1" adminServerPort="6299" adminAppName="governor">
+  <servers>
+    <server ip="127.0.0.1" jndiPort="0" httpPort="9080" adminPort="6203" appName="coframe" isSynchronized="true" name="server_127.0.0.1_6203" type="tomcat" version="5.5"/>
+    <server ip="127.0.0.1" jndiPort="0" httpPort="0" adminPort="6200" appName="default" isSynchronized="true" name="server_127.0.0.1_6200" type="tomcat"/>
+    <server ip="127.0.0.1" jndiPort="0" httpPort="9080" adminPort="6202" appName="portal" isSynchronized="true" name="server_127.0.0.1_6202" type="tomcat" version="5.5"/>
+  </servers>
+  <groups/>
+</domain>

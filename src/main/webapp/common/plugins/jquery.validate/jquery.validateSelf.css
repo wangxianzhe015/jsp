@@ -1,0 +1,45 @@
+/*验证出错时error信息的样式*/
+label.error {
+	/*background: url("images/unchecked.gif") no-repeat 0px 0px;
+	padding-left: 16px;*/
+	color: red;
+	margin-left: 5px;
+	display: inline-block;
+	height: 16px;
+	line-height: 16px;
+	width: auto;
+	vertical-align: middle;
+}
+
+em.error {
+	color: red;
+	margin-left: 5px;
+	display: inline-block;
+	width: auto;
+	font-style: normal;
+	position: relative;
+}
+
+em.valid { /*background: url("images/checked.gif") no-repeat 0px 0px;
+	width: 16px;*/
+	
+}
+
+/*验证出错时input的样式*/
+input.error {
+	border: 1px solid red;
+}
+
+/*select出错时的样式*/
+select.error {
+	border: 1px solid red;
+	background-color: #FFFFD5;
+	margin: 0px;
+	color: red;
+}
+
+/*input验证通过*/
+label.valid { /*background: url("images/checked.gif") no-repeat 0px 0px;
+	width: 16px;*/
+	
+}

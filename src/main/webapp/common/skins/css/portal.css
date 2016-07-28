@@ -1,0 +1,159 @@
+body {
+	background: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+.catalog {
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
+.catalog_head {
+	position: absolute;
+	top: 0;
+	height: 35px;
+	left: 2px;
+	right: 2px;
+	border-bottom: 1px solid #ccc;
+}
+
+.catalog_bar ul li {
+	list-style: none;
+	float: left;
+	line-height: 35px;
+	margin-right: 5px;
+}
+
+.catalog_bar {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+.bar_left {
+	float: left;
+	width: 400px;
+}
+
+.bar_left label {
+	float: left;
+	line-height: 35px;
+}
+
+.bar_left #portal_layout_setting li {
+	margin-right: 10px;
+}
+
+.bar_left #portal_layout_setting li a {
+	color: #b0b2b3;
+	text-decoration: none;
+}
+
+.bar_left #portal_layout_setting li a.current {
+	font-weight: bold;
+	color: #ff6600;
+}
+
+.bar_left #portal_layout_setting li a:HOVER {
+	color: #ff6600;
+}
+
+.bar_right {
+	float: right;
+	line-height: 35px;
+}
+
+.bar_right a,.bar_right a:HOVER {
+	color: #0088cc;
+}
+
+.catalog_content {
+	position: absolute;
+	top: 40px;
+	bottom: 0;
+	width: 100%;
+	overflow: auto;
+	height: 590px;
+	clear: both;
+}
+
+.column {
+	float: left;
+	min-height: 100px;
+}
+
+.portlet,.portlet-persist {
+	margin: 0 1em 1em 1em;
+	border-color: #ddd;
+}
+
+.portlet-not-persist {
+	border-color: #0088cc !important;
+}
+
+.portlet-header {
+	padding-bottom: 4px;
+	padding-left: 0.2em;
+	background: #f2f2f2;
+	color: #555;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	height: 25px !important;
+	line-height: 25px;
+	position: relative;
+	font-size: 14px;
+}
+
+.portlet-header .ui-icon {
+	float: left;
+	margin: 0 2px 0 1px;
+	z-index: 9999;
+	cursor: pointer;
+}
+
+.portlet-content {
+	padding: 0.4em;
+	height: 200px;
+	overflow-x: hidden;
+}
+
+.ui-sortable-placeholder {
+	border: 1px dotted black;
+	visibility: visible !important;
+	height: 100px !important;
+	background: #eee
+}
+
+.ui-sortable-placeholder * {
+	visibility: hidden;
+}
+
+.portlet-header-left {
+	width: 60%;
+	height: 100%;
+	overflow: hidden;
+	color: #666;
+	cursor: default;
+	white-space: nowrap;
+}
+
+.portlet-header-right {
+	position: absolute;
+	right: 0;
+	display: none;
+	top: 50%;
+	margin-top: -8px;
+	padding: 0 2px 0 2px;
+	background-color: #f2f2f2;
+}
+
+.portlet-content IFRAME {
+	width: 99%;
+	height: 99%;
+	margin: 0;
+	padding: 0;
+}

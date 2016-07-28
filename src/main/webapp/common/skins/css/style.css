@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+/*layout*/
+#wrapper{position:relative; margin:0 auto; width:1300px; padding-bottom:100px;}
+#loginWrapper{margin:0 auto; width:100%; height:100%; position:absolute; min-width:1276px; max-width:1280px; overflow:hidden;}
+
+/*login*/
+.login .top{position:relative; height:376px; background:url(../images/login_bg_top.png) no-repeat;}
+.login .top h1,.login .top span{position:absolute; bottom:40px;}
+/*.login .top h1{left:40px; width:263px; height:55px; background:url(../images/logo2.png) no-repeat;}*/
+.login .top h1{left:40px; width:263px; height:55px; background:url() no-repeat;}
+.login .top span{display:block; right:40px; width:263px; height:55px; background:url(../images/brand.png) no-repeat;}
+.login .top i{width:921px; height:11px; position:absolute; left:50%; margin-left:-460px; bottom:-12px; z-index:1; background:url(../images/login_top_shadow.png) no-repeat;}
+
+.login_out{height:550px; height:447px\9; position:relative; background:url(../images/login_bg_main.png) repeat-x;}
+.login_in{width:328px; height:220px; position:absolute; top:60px; left:50%; margin-left:-164px; background:url(../images/login_bg_loginbox.png) no-repeat;}
+.login_in .name,.login_in .psd{width:197px; height:23px; line-height:23px; padding:0 2px; margin:36px 0 0 105px; *margin:35px 0 0 270px; border:1px solid #9d9d9d; background:url(../images/login_bg_input.png) repeat-x; outline:none;}
+.login_in .psd{margin-top:20px; *margin-top:18px;}
+.login_in .on{border-color:#8a130d;}
+.login_in p{margin-top:40px; padding:0 25px}
+.login_in a{float:left; margin-top:10px; color:#666;}
+.login_in a:hover{color:#0043b1; text-decoration:none;}
+.login_in .submit{border:0; float:right; width:115px; height:33px; border:0; background:url(../images/login_loginbtn.png) no-repeat; cursor:pointer}
+
+#sidebar{position:absolute; top:-20px; width:175px;}
+#sidebar h1{padding:20px 0 10px 55px; background:url(../images/TOP.png) -1px top no-repeat;}
+/**#sidebar h1 span{display:block; width:118px; height:48px; background:url(../images/logo.png) no-repeat;}*/
+#sidebar h1 span{display:block; width:118px; height:22px; background:url() no-repeat;}
+.userinfo{position:relative; padding:5px; height:59px; background:url(../images/user-bg.png) no-repeat;}
+.userinfo dt{position:absolute; top:7px; left:7px; overflow:hidden; width:55px; height:55px;}
+.userinfo dd{padding-left:65px;}
+.userinfo dd b{color:#535353;}
+.userinfo dd a{color:#0061da; font-size:13px; line-height:22px;}
+.userinfo dd span,.userinfo dd span a{color:#535353; font-size:12px;}
+
+/*foldmenu*/
+.fmenu{width:175px;}
+.fmenu li,.fmenu dd{*zoom:1}/*解决ie67 bug*/
+
+.fmenu dl dt{position:relative; height:34px; line-height:34px; padding:0 10px; background:url(../images/menuitem_bg.png) repeat-x; cursor:pointer;}
+.fmenu dl dt.first{background:url(../images/menuitem_bg_1.png) repeat-x;}
+.fmenu dl dt.last{background:url(../images/menuitem_bg_2.png) repeat-x;}
+.fmenu dl dt a{display:block; padding-left:20px; background:url(../images/menu-icon.png) left center no-repeat;}
+.fmenu dl dt a:hover{text-decoration:none;}
+.fmenu dl dt b{display:none; position:absolute; top:32px; left:25px; z-index:1004; width:0; height:0; border-width:6px; font-size:0; border-color:#d3d9dd transparent transparent transparent; border-style:solid dashed dashed dashed;}
+.fmenu dl i{display:block; position:absolute; top:12px; right:8px; width:10px; height:10px; background:url(../images/+.png) center center no-repeat;  _overflow:hidden;}
+.fmenu dl dt.on i{background:url(../images/-.png) center center no-repeat;}
+.fmenu dl dt.on b{display:block;}
+.fmenu dl dd{display:none;}
+.fmenu dl li{line-height:34px; text-indent:10px;}
+.fmenu dl li.last{border-bottom:none;}
+
+.fmenu dl dl dt{padding:0; height:33px; background:url(../images/left-3.png) no-repeat;}
+.fmenu dl dl dt:hover,.fmenu dl dl dt.on{background:url(../images/left-3-2.png) no-repeat;}
+.fmenu dl dl dt a{display:inline; padding-left:0; background:none; color:#FFF;}
+.fmenu dl dl li{position:relative;}
+
+.fmenu dl dl.fpop dt i{top:12px; right:6px; width:0; height:0; font-size:0; border-width:4px; border-color:transparent transparent transparent #e4eaed; border-style:dashed dashed dashed solid; background:none;}
+.fmenu dl dl.fpop dt.on i{top:10px; right:2px; z-index:1000; border-width:6px; border-color:transparent #e5ebee transparent transparent; border-style:dashed solid dashed dashed;}
+.fmenu dl dl.fpop dt i i{display:none;}
+.fmenu dl.fpop dt.on i i{display:block; top:-7px; right:-8px; border-color:transparent #FFF transparent transparent; border-style:dashed solid dashed dashed; z-index:10001}
+.fmenu dl dl.fpop .fpop dt{ background:url(../images/left-3-1.png) no-repeat;}
+.fmenu dl dl.fpop .fpop dt:hover,.fmenu dl dl.fpop .fpop dt.on{background:url(../images/left-3-2.png) no-repeat;}
+.fpop{position:relative;}
+
+
+.fpop dd{position:absolute; top:0; left:176px; z-index:999; width:175px; border:1px solid #666;}
+.fpop .fpop dd{left:177px;}
+
+.fradius{width:175px; border:none;}
+.fradius .b1,.fradius .b2,.fradius .b3,.fradius .b4{display:block; height:1px; line-height:1px; font-size:0; border-left:1px solid #e5ebee; border-right:1px solid #e5ebee; overflow:hidden;}
+.fradius .b1,.fradius .b4{background:#e5ebee; margin:0 2px;}
+.fradius .b2,.fradius .b3{margin:0 1px; background:#e4eaed;}
+
+.fradius .fpop dd{width:177px;}
+.fradius .fpop .fmain{ border:1px solid #e5ebee}
+
+.fradius .fpop dd{border:none;}
+
+#main{margin-left:185px; margin-top:20px;}
+
+.top{position:relative; padding:0 69px 0 36px;}
+a.home{position:absolute; top:0; left:0; display:block; width:36px; height:34px; background:url(../images/home.png) no-repeat;}
+.top .rightbar{position:absolute; top:0; right:-15px; width:104px; height:34px;}
+.top .rightbar a.message,.top .rightbar span{float:left; display:block; height:34px;}
+.top a.message{position:relative; padding-left:30px; width:36px; line-height:34px; background:url(../images/message_bg.png) no-repeat;}
+.top a.message i{position:absolute; top:-10px; right:-10px; width:24px; height:24px; line-height:22px; text-align:center; color:#FFF; background:url(../images/message_num_bg.png) no-repeat;}
+.top span.skinbar{padding-left:6px; width:32px; background:url(../images/speedbar3.png) no-repeat;}
+.skinbar a{display:inline-block; float:left; width:16px; height:16px; overflow:hidden;}
+
+.tmenu{height:34px; background:url(../images/tmenu_bg.png) repeat-x;}
+.tmenu dl{position:relative; float:left; width:90px; height:34px;}
+.tmenu dl dt{padding-left:30px; padding-right:10px; overflow:hidden; height:34px; line-height:34px; background:url(../images/tmenu_item.png) no-repeat;}
+.tmenu .select dl dt{position:relative; cursor:pointer; background:url(../images/tmenu_item2.png) no-repeat;}
+.tmenu .select dd{display:none; position:absolute; top:33px; left:-1px; z-index:999; width:180px; border:1px solid #aaa; border-top:none; background:#FFF;}
+
+.tmenu .select dl dl{float:none; height:25px; width:auto;}
+.tmenu .select dl dl dt{padding:0 10px; overflow:auto; height:24px; line-height:24px; background:none; border-bottom:1px dashed #eee;}
+.tmenu .select dl dl dt:hover{background:#f7f7f7;}
+.tmenu .select dl dl dt.on{background:#eee;}
+.tmenu .select dl dl dt i{display:block; position:absolute; top:6px; right:5px; width:0; height:0; font-size:0; border-width:4px; border-color:transparent transparent transparent #ccc; border-style:dashed dashed dashed solid;}
+.tmenu .select dl dl dt:hover i{border-color:transparent transparent transparent #999;}
+.tmenu .select dl dl dt.on i{border-color:transparent transparent transparent #666;}
+.tmenu .select dl.fpop dd{left:-1px; top:33px;}
+.tmenu .select dl.fpop .fpop dd{left:175px; top:2px; border-top:1px solid #aaa;}
+
+.submain{padding:20px; background:url(../images/bg2.png);}
+
+h3.title{position:relative; float:left; margin-bottom:10px; padding-left:15px; height:48px; line-height:48px; background:url(../images/title-1.png) left top no-repeat;}
+h3.title span{display:block; margin-right:18px; padding:0 10px; font:normal 12px/48px "宋体"; color:#FFF; background:url(../images/title_middle_bg.png) center center repeat-x;}
+h3.title b{display:block; position:absolute; top:0; right:0; width:18px; height:48px; overflow:hidden; background:url(../images/title-3.png) center center no-repeat;}
+
+.iframe_wrap{clear:both;}
+.iframe_top{height:20px; background:url(../images/iframe_top.png) no-repeat;}
+.iframe_bottom{height:15px; background:url(../images/iframe_bottom.png) no-repeat;}
+
+
+.iframe_box{margin:-10px 0  -5px 0; height:635px; background:url(../images/iframe_middle.png) repeat-y; padding: 0 10px;background-color: #fff}
+.iframe_box iframe{width:100%; height:100%; background: #fff}
+
+.bottom{position:relative; height:10px; overflow:hidden;}
+.bottom i,.bottom b{position:absolute; top:0; width:10px; height:10px; overflow:hidden;}
+.bottom i{left:0; background:url(../images/main_bottom_left.png) no-repeat;}
+.bottom b{right:0; background:url(../images/main_bottom_right.png) no-repeat;}
+.bottom span{display:block; margin:0 10px; height:10px; background:url(../images/main_bottom_middle.png) repeat-x;}
+
+/*copyright*/
+#foot{position:absolute; left:0; bottom:0; padding:0 20px; width:100%; height:73px; background:url(../images/footer.png) center center no-repeat;}
+/*login copyright*/
+#loginFoot{ position:absolute; z-index:14; width:100%;  height:42px; line-height:42px; text-align:center; left:0; right:0; bottom:0px; background:url(../images/login_bg_foot.png) repeat-x; color:#FFF;}
+#loginFoot span{position:absolute; top:0; right:20px}

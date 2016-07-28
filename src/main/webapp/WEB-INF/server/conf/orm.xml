@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+	version="1.0">
+	<!-- userPortal的操作 -->
+	<entity class="com.smartcloud.crowdfunding.console.model.UserPortal">
+
+		<named-native-query name="QUERY_USER_PORTALS_BY_CON"
+			result-class="com.smartcloud.crowdfunding.console.model.UserPortal">
+			<query>
+				select up.* from gas_user_portal as up left join
+				gas_portal_catalog
+				as p on p.catalog_id=up.catalog_id where
+				1=1
+				#if($userId!="")
+				and
+				up.user_id=$userId
+				#end
+			</query>
+		</named-native-query>
+		<named-native-query name="CHANGE_USERS_PORTAL_LAYOUT">
+			<query>
+				update gas_user_portal set PORTAL_LAYOUT=$newPortalLayout
+				where
+				user_id=$userId
+			</query>
+		</named-native-query>
+
+		<named-native-query name="DELETE_USERPORTALS_BY_PORTAL">
+			<query>
+				delete from gas_user_portal where catalog_id=$catalogId
+			</query>
+		</named-native-query>
+
+	</entity>
+	<!-- employee的操作 -->
+	<entity class="com.smartcloud.crowdfunding.console.model.Employee">
+		<named-native-query name="QUERY_EMPLOYEE_NO_ORG"
+			result-class="com.smartcloud.crowdfunding.console.model.Employee">
+			<query>
+				select * from gas_employee where org_id is null order by employee_name asc
+			</query>
+		</named-native-query>
+
+		<named-native-query name="QUERY_EMPLOYEE_WITH_ORGINFO_BY_ORG"
+			result-class="com.smartcloud.crowdfunding.console.model.Employee">
+			<query>
+				select * from gas_employee where org_id =$orgId order by employee_name asc
+			</query>
+		</named-native-query>
+	</entity>
+	<!-- user操作 -->
+	<entity class="com.smartcloud.crowdfunding.console.model.User">
+		<named-native-query name="QUERY_WITH_PAGE"
+			result-class="com.smartcloud.crowdfunding.console.model.User">
+			<query>select * from GAS_USER </query>
+		</named-native-query>
+
+		<named-native-query name="QUERY_USER_FOR_LOGIN"
+			result-class="com.smartcloud.crowdfunding.console.model.User">
+			<query>select * from gas_user where user_name=$userName and
+				password =$password</query>
+		</named-native-query>
+
+
+		<named-native-query name="QUERY_USER_NO_ORG"
+			result-class="com.smartcloud.crowdfunding.console.model.User" result-set-mapping="userInfoWithOrg">
+			<query>
+				select * from gas_user where org_id is null
+			</query>
+		</named-native-query>
+		<named-native-query name="QUERY_USER_WITH_ORGINFO"
+			result-class="com.smartcloud.crowdfunding.console.model.User" result-set-mapping="userInfoWithOrg">
+			<query>
+				select
+				u.user_id,u.user_name,u.nick_name,u.org_id as
+				orgId,u.is_valid,o.org_name,o.org_path
+				from gas_user as u left join
+				gas_org as o on o.org_id=u.org_id
+			</query>
+		</named-native-query>
+		<named-native-query name="QUERY_USER_WITH_ORGINFO_BY_ORG"
+			result-class="com.smartcloud.crowdfunding.console.model.User" result-set-mapping="userInfoWithOrg">
+			<query>
+				select
+				u.user_id,u.user_name,u.nick_name,u.org_id as
+				orgId,u.is_valid,o.org_name,o.org_path
+				from gas_user as u left join
+				gas_org as o on o.org_id=u.org_id where o.org_id=$orgId
+			</query>
+		</named-native-query>
+		<sql-result-set-mapping name="userInfoWithOrg">
+			<entity-result entity-class="com.smartcloud.crowdfunding.console.model.User">
+				<field-result name="orgId" column="orgId"></field-result>
+				<field-result name="orgName" column="orgName"></field-result>
+				<field-result name="orgPath" column="orgPath"></field-result>
+			</entity-result>
+		</sql-result-set-mapping>
+	</entity>
+	<!-- 快捷菜单的相关操作 -->
+	<entity class="com.smartcloud.crowdfunding.console.model.ShortcutMenu">
+		<named-native-query name="DELETE_SHORTCUT_MENU">
+			<query>delete from GAS_SHORTCUT_MENU where 1=1
+				#if($userId!="")
+				and user_id=$userId
+				#end
+				#if($moduleId!="")
+				and module_id=$moduleId
+				#end
+			</query>
+		</named-native-query>
+		<named-native-query name="QUERY_SHORTCUT_MENUS_OF_USER"
+			result-class="com.smartcloud.crowdfunding.console.model.ShortcutMenu"
+			result-set-mapping="quickMenusInfo">
+			<query>
+				SELECT a.web_context AS webContext,a.protocol,a.ip,a.port,b.* FROM  (
+				SELECT sm.*,
+				m.APP_ID,m.module_path AS menuPath, 
+				m.module_desc AS shortcutMenuName ,
+				m.entry_url AS shortcutMenuUrl
+				FROM gas_shortcut_menu AS sm LEFT JOIN gas_module AS m ON sm.module_id=m.module_id
+				WHERE 1=1
+				#if($userId!="")
+				and sm.user_id=$userId
+				#end
+				#if($moduleId!="")
+				and sm.module_id=$moduleId
+				#end
+				
+				) b LEFT JOIN gas_application a
+				ON a.APP_ID=b.APP_ID			
+			</query>
+		</named-native-query>
+		<sql-result-set-mapping name="quickMenusInfo">
+			<entity-result entity-class="com.smartcloud.crowdfunding.console.model.ShortcutMenu">
+				<field-result name="menuPath" column="menuPath"></field-result>
+				<field-result name="shortcutMenuName" column="shortcutMenuName"></field-result>
+				<field-result name="shortcutMenuUrl" column="shortcutMenuUrl"></field-result>
+				<field-result name="webContext" column="webContext"></field-result>
+				<field-result name="protocol" column="protocol"></field-result>
+				<field-result name="ip" column="ip"></field-result>
+				<field-result name="port" column="port"></field-result>
+			</entity-result>
+		</sql-result-set-mapping>
+	</entity>
+	<!-- 角色功能的相关操作 -->
+	<entity class="com.smartcloud.crowdfunding.console.model.RoleFunction">
+		<named-native-query name="QUERY_FUNCS_BY_ROLE"
+			result-class="com.smartcloud.crowdfunding.console.model.RoleFunction">
+			<query>
+				select * from GAS_Role_function where role_id=$roleId
+		</query>
+		</named-native-query>
+
+
+		<named-native-query name="DELETE_ROLE_FUNC">
+			<query>delete from GAS_Role_function where 1=1
+				#if($roleId!="")
+				and role_id=$roleId
+				#end
+				#if($functionId!="")
+				and
+				function_id=$functionId
+				#end
+			</query>
+		</named-native-query>
+	</entity>
+	<!-- employee操作 -->
+	<entity class="com.smartcloud.crowdfunding.console.model.Employee">
+		<named-native-query name="QUERY_ALL_EMPLOYEE"
+			result-class="com.smartcloud.crowdfunding.console.model.Employee">
+			<query>select * from gas_employee </query>
+		</named-native-query>
+	</entity>
+	<!-- 角色的相关操作 -->
+	<entity class="com.smartcloud.crowdfunding.console.model.OrgRole">
+		<named-native-query name="QUERY_ORG_ROLES"
+			result-class="com.smartcloud.crowdfunding.console.model.OrgRole">
+			<query>
+				select * from gas_org_role where 1=1
+				#if($orgId!="")
+				and
+				org_id=$orgId
+				#end
+				#if($roleId!="")
+				and role_id=$roleId
+				#end
+			</query>
+		</named-native-query>
+	</entity>
+	<entity class="com.smartcloud.crowdfunding.console.model.UserRole">
+		<named-native-query name="QUERY_USERROLE_BY_ORGROLE"
+			result-class="com.smartcloud.crowdfunding.console.model.UserRole">
+			<query>
+				SELECT
+				ur.*
+				FROM
+				gas_user_role as ur
+				LEFT JOIN
+				gas_user as
+				u
+				ON
+				u.user_id= ur.user_id
+				LEFT JOIN
+				gas_org as o
+				ON
+				o.org_id= u.org_id
+				WHERE
+				o.org_id =$orgId
+				and ur.role_id =$roleId
+			</query>
+		</named-native-query>
+	</entity>
+	<entity class="com.smartcloud.crowdfunding.console.model.Role">
+		<named-native-query name="QUERY_ROLE_BY_ORG"
+			result-class="com.smartcloud.crowdfunding.console.model.Role">
+			<query>
+				select r.* from gas_role r right join gas_org_role o_r on
+				r.role_id=o_r.role_id where org_Id=$orgId	
+			</query>
+		</named-native-query>
+		<named-native-query name="QUERY_ALL_ROLE_WITH_ORG"
+			result-class="com.smartcloud.crowdfunding.console.model.Role" result-set-mapping="roleInfo">
+			<query>
+				select r.*,u.nick_name as nickName from gas_role r
+				left join
+				gas_user u on r.user_id=u.user_id			
+			</query>
+		</named-native-query>
+		<named-native-query name="DELETE_USER_ROLE">
+			<query>
+				delete from gas_user_role where 1=1
+				#if($userId!="")
+				and
+				user_id=$userId
+				#end
+				#if($roleId!="")
+				and role_id=$roleId
+				#end
+			</query>
+		</named-native-query>
+		<named-native-query name="DELETE_ORG_ROLE">
+			<query>
+				delete from gas_org_role where 1=1
+				#if($orgId!="")
+				and
+				org_id=$orgId
+				#end
+				#if($roleId!="")
+				and role_id=$roleId
+				#end
+			</query>
+		</named-native-query>
+
+
+
+		<sql-result-set-mapping name="roleInfo">
+			<entity-result entity-class="com.smartcloud.crowdfunding.console.model.Role">
+				<field-result name="orgId" column="orgId"></field-result>
+				<field-result name="orgName" column="orgName"></field-result>
+				<field-result name="orgPath" column="orgPath"></field-result>
+				<field-result name="userName" column="nickName"></field-result>
+			</entity-result>
+		</sql-result-set-mapping>
+	</entity>
+	<!-- 组织机构的相关操作 -->
+	<entity class="com.smartcloud.crowdfunding.console.model.Org">
+
+		<named-native-query name="QUERY_ROOT_ORGINFO"
+			result-class="com.smartcloud.crowdfunding.console.model.Org">
+			<query>select * from gas_org where parent_org_id is null
+			</query>
+		</named-native-query>
+		
+		<named-native-query name="GET_ALL_ORG"
+			result-class="com.smartcloud.crowdfunding.console.model.Org">
+			<query>
+			   select * from gas_org order by org_path asc
+			</query>
+		</named-native-query>
+		<named-native-query name="GET_CHILDREN_ORG"
+			result-class="com.smartcloud.crowdfunding.console.model.Org">
+			<query>
+			   select * from gas_org where org_path like $orgPath order by org_path asc
+			</query>
+		</named-native-query>				
+
+		<named-native-query name="QUERY_CHILDREN_ORGINFO"
+			result-class="com.smartcloud.crowdfunding.console.model.Org">
+			<query>select * from gas_org where parent_org_id =$parentOrgId
+			</query>
+		</named-native-query>
+		<named-native-query name="QUERY_CHILDREN_ORGINFO_DEEPLY"
+			result-class="com.smartcloud.crowdfunding.console.model.Org">
+			<query>select * from gas_org where org_path like
+				'#parentOrgId#,%'
+			</query>
+		</named-native-query>
+		<named-native-query name="QUERY_ORGINFO_WITH_PARENT"
+			result-class="com.smartcloud.crowdfunding.console.model.Org" result-set-mapping="orgInfo">
+			<query>
+				SELECT
+				a.*,
+				b.org_name as parentOrgName,
+				b.org_path AS
+				parentOrgPath,
+				b.org_manager AS
+				parentOrgManager
+				FROM
+				gas_org a
+				LEFT JOIN
+				gas_org b
+				ON
+				a.parent_org_id=
+				b.org_id
+				LEFT JOIN
+				gas_user u
+				ON
+				a.org_manager= u.user_id where 1=1
+				#if($orgId!="")
+				and a.org_id =
+				$orgId
+				#end
+			</query>
+		</named-native-query>
+		<sql-result-set-mapping name="orgInfo">
+			<entity-result entity-class="com.smartcloud.crowdfunding.console.model.Org">
+
+				<field-result name="parentOrgName" column="parentOrgName" />
+				<field-result name="parentOrgPath" column="parentOrgPath" />
+				<field-result name="parentOrgManager" column="parentOrgManager" />
+			</entity-result>
+		</sql-result-set-mapping>
+
+	</entity>
+	<!-- 应用的相关操作 -->
+	<entity class="com.smartcloud.crowdfunding.console.model.Application">
+		<named-native-query name="QUERY_APP_BY_FUNC"
+			result-class="com.smartcloud.crowdfunding.console.model.Application">
+			<query>
+				select a.* from gas_application a left join gas_module m on
+				a.app_id=m.app_id where m.module_id=$moduleId
+			</query>
+		</named-native-query>
+		<!-- 根据模块获取模块所属的应用列表 by wengzr-->
+		<named-native-query name="GET_APP_BY_MODULE"
+			result-class="com.smartcloud.crowdfunding.console.model.Application">
+			<query>
+				SELECT DISTINCT a.* FROM gas_application a JOIN	gas_module b ON a.app_id=b.app_id WHERE module_id IN (#moduleIds#)
+				ORDER BY a.display_no asc
+			</query>
+		</named-native-query>
+		
+		<named-native-query name="GET_APP_BY_PERMISSION" result-class="com.smartcloud.crowdfunding.console.model.Application">
+		    <query>
+			 SELECT DISTINCT a.* FROM gas_application a 
+			 JOIN gas_module m ON a.APP_ID=m.APP_ID
+			 JOIN gas_function f ON m.MODULE_ID=f.MODULE_ID
+			 JOIN gas_role_function rf  ON f.FUNCTION_ID=rf.FUNCTION_ID 
+			 WHERE rf.role_id IN (#roleIds#)		       
+		    </query>
+		</named-native-query>				
+		
+	</entity>
+	<!-- 模块的相关操作 -->
+	<entity class="com.smartcloud.crowdfunding.console.model.Module">
+		<named-native-query name="QUERY_ROOT_MODULE"
+			result-class="com.smartcloud.crowdfunding.console.model.Module">
+			<query>select * from gas_module where (parent_module_id is null
+				or parent_module_id=0)
+				#if($appId!="")
+				and app_id = $appId
+				#end
+			</query>
+		</named-native-query>
+		<named-native-query name="QUERY_ROOT_MODULE_BY_APP"
+			result-class="com.smartcloud.crowdfunding.console.model.Module">
+			<query>select * from gas_module where parent_module_id is null
+				and app_id=$appId
+			</query>
+		</named-native-query>
+		<named-native-query name="QUERY_MODULES_BY_MODULE"
+			result-class="com.smartcloud.crowdfunding.console.model.Module">
+			<query>
+				select * from gas_module where parent_module_id
+				=$parentModuleId
+			</query>
+		</named-native-query>
+		<named-native-query name="QUERY_MODULES_BY_APP"
+			result-class="com.smartcloud.crowdfunding.console.model.Module">
+			<query>
+				select * from gas_module where app_id=$appId order by module_no asc
+			</query>
+		</named-native-query>
+		
+		<!-- 根据当前用户角色获取对应功能所在的模块  by wengzr -->
+		<named-native-query name="GET_MODULE_BY_ROLE" result-class="com.smartcloud.crowdfunding.console.model.Module">
+		   <query>
+		       SELECT DISTINCT a.MODULE_ID FROM gas_function a JOIN gas_role_function b ON a.function_id=b.function_id WHERE b.role_id in (#roleIds#)
+		   </query>
+		</named-native-query>
+
+		<named-native-query name="GET_MODULE_BY_PERMISSION" result-class="com.smartcloud.crowdfunding.console.model.Module">
+		    <query>
+			 SELECT DISTINCT m.* FROM gas_application a 
+			 JOIN gas_module m ON a.APP_ID=m.APP_ID
+			 JOIN gas_function f ON m.MODULE_ID=f.MODULE_ID
+			 JOIN gas_role_function rf  ON f.FUNCTION_ID=rf.FUNCTION_ID 
+			 WHERE rf.role_id IN (#roleIds#)
+			 AND a.app_id=$appId		       
+		    </query>
+		</named-native-query>
+	</entity>
+	
+	
+	<!-- 功能函数的相关操作 -->
+	<entity class="com.smartcloud.crowdfunding.console.model.Function">
+		<named-native-query name="GET_FUNC_BY_PERMISSION" result-class="com.smartcloud.crowdfunding.console.model.Function">
+		    <query>
+			 SELECT DISTINCT f.* FROM gas_application a 
+			 JOIN gas_module m ON a.APP_ID=m.APP_ID
+			 JOIN gas_function f ON m.MODULE_ID=f.MODULE_ID
+			 JOIN gas_role_function rf ON f.FUNCTION_ID=rf.FUNCTION_ID 
+			 WHERE rf.role_id IN (#roleIds#)
+			 AND m.module_id=$moduleId		       
+		    </query>
+		</named-native-query>
+		<!-- 获取模块下作为菜单项的功能 -->
+		<named-native-query name="GET_FUNC_MENU_BY_PERMISSION" result-class="com.smartcloud.crowdfunding.console.model.Function">
+		    <query>
+			 SELECT DISTINCT f.* FROM gas_application a 
+			 JOIN gas_module m ON a.APP_ID=m.APP_ID
+			 JOIN gas_function f ON m.MODULE_ID=f.MODULE_ID
+			 JOIN gas_role_function rf ON f.FUNCTION_ID=rf.FUNCTION_ID 
+			 WHERE rf.role_id IN (#roleIds#)
+			 AND m.module_id=$moduleId	
+			 AND f.is_menu='Y'
+			 ORDER BY f.display_no	       
+		    </query>
+		</named-native-query>		
+		
+		<named-native-query name="QUERY_FUNCS_NO_ACCESS"
+			result-class="com.smartcloud.crowdfunding.console.model.Function">
+			<query>
+				select f.* from gas_function as f left join gas_module as m on
+				f.module_id =m.module_id where m.access_flag='N'
+			</query>
+		</named-native-query>
+		<named-native-query name="QUERY_FUNCS_IN_ROLEIDS"
+			result-class="com.smartcloud.crowdfunding.console.model.Function">
+			<query>
+				SELECT DISTINCT
+				f.*
+				FROM
+				gas_role_function rf
+				LEFT JOIN
+				gas_function f
+				ON
+				rf.function_id= f.function_id
+				WHERE
+				rf.role_id in
+				(#roleIds#)				
+			</query>
+		</named-native-query>
+		
+		<named-native-query name="GET_FUNCS_IN_ROLEIDS"
+			result-class="com.smartcloud.crowdfunding.console.model.Function">
+			<query>
+				SELECT DISTINCT
+				f.*
+				FROM
+				gas_role_function rf
+				LEFT JOIN
+				gas_function f
+				ON
+				rf.function_id= f.function_id
+				WHERE
+				rf.role_id in
+				(#roleIds#)
+						
+			</query>
+		</named-native-query>		
+		
+		<named-native-query name="QUERY_FUNCS_IN_ROLEIDS_AND_MODULE"
+			result-class="com.smartcloud.crowdfunding.console.model.Function">
+			<query>
+				SELECT DISTINCT
+				f.*
+				FROM
+				gas_role_function rf
+				LEFT JOIN
+				gas_function f
+				ON
+				rf.function_id= f.function_id
+				WHERE
+				rf.role_id in
+				(#roleIds#)
+				and f.module_id=$moduleId			
+			</query>
+		</named-native-query>
+
+		<named-native-query name="QUERY_FUNCS_BY_MODULE"
+			result-class="com.smartcloud.crowdfunding.console.model.Function"
+			result-set-mapping="funcInfoWithMod">
+			<query>
+				select f.*,m.module_id as pmoduleId,m.module_name as
+				pmoduleName
+				,m.module_desc as pmoduleMemo,m.module_path as
+				pmodulePath from
+				gas_function as f
+				left join gas_module as m on
+				f.module_id =m.module_id where m.module_id=$moduleId		
+			</query>
+		</named-native-query>
+		<sql-result-set-mapping name="funcInfoWithMod">
+			<entity-result entity-class="com.smartcloud.crowdfunding.console.model.Function">
+				<field-result name="pmoduleId" column="pmoduleId"></field-result>
+				<field-result name="pmoduleName" column="pmoduleName"></field-result>
+				<field-result name="pmoduleMemo" column="pmoduleMemo"></field-result>
+				<field-result name="pmodulePath" column="pmodulePath"></field-result>
+			</entity-result>
+		</sql-result-set-mapping>
+	</entity>
+
+</entity-mappings>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<service-provider>
+    <RegistryConfig>
+         <property name="address" value="N/A" />
+         <property name="username" value="" />
+         <property name="password" value="" />
+    </RegistryConfig>
+    <ProtocolConfig>
+         <property name="name" value="dubbo" />
+         <property name="port" value="12345" />
+         <property name="threads" value="100" />
+    </ProtocolConfig>
+
+    <ServiceConfig>
+        <service interface="" implementation="" version=""/>
+    </ServiceConfig>
+</service-provider>

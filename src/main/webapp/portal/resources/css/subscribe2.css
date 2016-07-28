@@ -1,0 +1,166 @@
+﻿@charset "UTF-8";
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
+body{font-size:12px;color:#131313;line-height:20px;-webkit-text-size-adjust:none;}
+input::-ms-clear{display:none;}
+a{color:#37e;text-decoration:none;}
+a:hover{color:#F55;text-decoration:none;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;}
+
+html,html body {_background-image:url('about:blank');_background-attachment:fixed;}
+.left{float:left;}
+.right{float:right;}
+.bold{font-weight:bold;}
+.normal{font-weight:normal}
+
+.yahei{font-family:Mircrosoft Yahei;}
+.arial{font-family:Arial, Helvetica, sans-serif;}
+.simsun{font-family:simsun;}
+
+/* CSS Document */
+body {background:#e8eff6;}
+.content {width:1000px;margin:20px auto 10px;min-height:920px;height:auto !important;_height:920px;}
+
+/*日期样式*/
+.font_wryh {font-family:Microsoft YaHei,  Arial, sans-serif;}
+.font_s {font-family:"宋体", simsun, arial, sans-serif;}
+.my_list{padding:6px 17px 15px 15px;margin-top:0px;background-color:#fff;border:1px solid #d9e5f1;min-height: 900px;_height:900px;}
+.my_list .my_list_title, .my_history .title, .my_vip .title {font-size:16px;color:#555;}
+.my_list_detail .date {width:105px;border-top:4px solid #e1e1e1;font-family:"宋体", simsun, arial, sans-serif;*display:inline;}
+.my_list_detail{margin:0 auto;position: relative;}
+.my_list_detail .date .month {color:#999;font-size:12px;}
+.my_list_detail .date .day {padding-top:4px;padding-left:5px;}
+.my_list_detail .date .day h1 {font-size:30px;color:#555;height:30px;line-height:30px;}
+.my_list_detail .date .day h1.zh_font {font-size:30px;height:30px;line-height:30px;}
+.my_list_detail .date .day p {line-height:26px;color:#999;}
+.my_list_detail .date .day span.icon_weather{display:block;}
+
+.detail_nmdt{background: #f7f7f7;height: 30px;line-height: 30px;position: relative;}
+.detail_nmdt span{padding: 0 20px 0 10px;color: #999;}
+.detail_nmdt span b{font-weight: normal;}
+.date_week{font:14px/50px Microsoft YaHei;color: #555;padding:0 7px 0 0;height: 34px;overflow: hidden;width: 30px;}
+.ht_days{padding:0 7px 0 0;}
+
+/*信息样式*/
+.my_list_detail {margin-top:-1px;width:880px;}
+.last {background:transparent url("../images/last_border.png") no-repeat left bottom;}
+.detail_box {/* border-top:1px solid #e1e1e1;*/ border-left:1px solid #e1e1e1;}
+.detail_one {cursor:pointer;width:750px;margin-left:-1px;*position:static;border-top:1px solid #e1e1e1;border-right:1px solid #fff;border-left:1px solid #e1e1e1;border-bottom:1px solid #fff;z-index:1;}
+.last .detail_one {border-bottom:1px solid #e1e1e1;}
+.detail_info {width:100%;float:left;padding-bottom:5px;}
+.detail_info ul li {float:left;*display:inline;padding-top:12px;}
+.detail_info .info_icon {width:70px;padding:10px;height:70px;}
+.detail_info .info_icon span.type1 {background-position:-135px -171px;}
+.detail_info .info_icon span.type2 {background-position:-108px -171px;}
+.detail_info .info_icon span.type3 {background-position:-81px -171px;}
+.detail_info .info_icon span.type4 {background-position:-54px -171px;}
+.detail_info .info_icon span.type5 {background-position:-27px -170px;}
+.detail_info .info_icon span.type6 {background-position:0px -170px;}
+.detail_info .info_txt {width:290px;padding-top:9px;min-height:87px;padding-left:10px;}
+.detail_info .info_txt h1 {height:20px;line-height:20px;}
+.detail_info .info_txt h1 a {font-size:16px;color:#555;display:block;height:20px;line-height:20px;width:270px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.detail_info .info_txt h1 a:hover {color:#f60;}
+.detail_info .info_txt p {color:#999;width:320px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;line-height:18px;margin-top:8px;}
+.detail_info .info_txt_tel{height:15px;margin-top:0px !important;}
+.detail_info .info_txt_tel span{display:none;_display:block;}
+.detail_info:hover .info_txt_tel span{display:block;}
+.detail_info .info_price {font-size:14px;color:#555555;width:110px;padding-right:10px;font-family:Microsoft YaHei, Arial, sans-serif;}
+.detail_info .info_price p.tishi2 {font-size:12px;color:#f60;margin-top:0px;position:relative;}
+.detail_info .info_price p.t_w {font-size:12px;color:#999999;margin-top:0px;}
+.detail_info .info_price a {font-size:12px;display:none;_display:block;}
+.detail_info .info_price a.check .icon{display:inline-block;width:10px;height:10px;background:url(../images/myelong_com_2014.png) no-repeat 2px 5px;*vertical-align:middle;}
+.detail_info .info_price a.check:hover .icon{background-position:-32px 5px;}
+.detail_info .info_price a.on {color:#f60;display:block;}
+.detail_info .info_price a.on .icon{background-position:-21px 5px;}
+.detail_info .info_price a.on:hover .icon{background-position:-21px 5px;}
+
+.detail_info .info_trace {text-align:center;padding-left:0px;padding-right:0px;width:160px;height:82px;}
+.detail_info .info_trace h2 {font-size:14px;color:#555;}
+.detail_info .info_trace p {color:#777;}
+.detail_info .info_trace a {margin-left:4px;margin-bottom:4px;float:left;width:54px;text-align:center;}
+.detail_info .info_trace a span{float:left;}
+.detail_info .info_trace a .mod_btn{}
+.detail_info .info_trace a .icon{display:inline-block;width:7px;height:6px;overflow:hidden;background:url("") no-repeat -65px -280px;margin:7px -4px 0 1px;float:right;}
+.detail_info .info_trace a:hover .icon{background-position:-71px -280px;}
+.detail_info .info_trace a.check_on .icon{background-position:-71px -283px;}
+
+.content .price { font-family: arial;  color: #f60; font-size: 14px; border-bottom: 1px dotted #f60;}
+/*进度查询按钮显示*/
+.detail_one:hover .detail_info .info_price a.check{display:block;}
+
+/*.detail_info .info_trace a {position:absolute;bottom:10px;left:35%;color:#999;display:none;*//*_display:block;*//*}*/
+.detail_info .info_price span.icon_trace {display:inline-block;width:16px;height:20px;background:url("") no-repeat;vertical-align:middle;margin-right:5px;}
+.detail_info .trace_waiting {}
+.detail_info .trace_waiting span.icon_trace {background-position:0px -282px;}
+.detail_info .trace_done {}
+.detail_info .trace_done span.icon_trace {background-position:-18px -282px;}
+.detail_info .trace_cancel {}
+.detail_info .trace_cancel span.icon_trace {background-position:-108px -282px;}
+.detail_info .trace_refuse {}
+.detail_info .trace_refuse span.icon_trace {background-position:-36px -283px;}
+.detail_one .detail_ems {padding:20px 0 10px 50px;border-top:1px dashed #dddddd;position:relative;}
+.detail_one .detail_ems ul{clear:both;}
+.detail_one .detail_ems ul li:first-child {}
+.detail_one .ems_close {width:11px;height:11px;display:block;position:absolute;right:10px;top:10px;background:url(../images/myelong_com_2014.png) no-repeat 0px -12px;}
+.detail_one .ems_close:hover {background:url(../images/myelong_com_2014.png) no-repeat -21px -12px;}
+.detail_one:hover {border:1px solid #fa7e38;z-index:2;position:relative;}
+.detail_one .order_detail {clear:both;padding-top:10px;}
+.detail_ems .progressBar {}
+.detail_ems .progressBar .progressBar_txt {}
+.detail_ems .progressBar .progressBar_txt li {float:left;width:133px;text-align:center;color:#777;position: relative;}
+.detail_ems .progressBar .progressBar_txt li.first {width:70px;text-align:left;}
+
+
+.detail_ems .progressBar .progressBar_txt li a{position: absolute;background:url(../images/mye_probar.png) no-repeat -2px -108px;width:14px;height: 14px;left:50%;top:20px;margin-left:-6px;}
+.detail_ems .progressBar .progressBar_txt li a:hover{background:url(../images/mye_probar.png) no-repeat -44px -108px;}
+
+
+.detail_ems .progressBar .bar_off {background:url("../images/mye_probar.png") no-repeat right -22px;clear:both;height:10px;}
+.detail_ems .progressBar .bar_on {overflow:hidden;height:10px;}
+.detail_ems .progressBar .bar_on div {background:url("../images/mye_probar.png") no-repeat right 0;height:10px;}
+.detail_ems .step1 {width:6px;}
+.detail_ems .step2 {width:137px;}
+.detail_ems .step3 {width:268px;}
+.detail_ems .step4 {width:399px;}
+.detail_ems .step5 {width:620px;}
+.detail_ems .over1, .detail_ems .over1 .step1, .detail_ems .over1 .bar_on div {width:93px;}
+.detail_ems .over2, .detail_ems .over2 .step2, .detail_ems .over2 .bar_on div {width:224px;}
+.detail_ems .over3, .detail_ems .over3 .step3, .detail_ems .over3 .bar_on div {width:355px;}
+.detail_ems .over4, .detail_ems .over4 .step4, .detail_ems .over4 .bar_on div {width:486px;}
+.detail_ems .over5, .detail_ems .over5 .step5, .detail_ems .over5 .bar_on div {width:617px;}
+.order_detail {padding-top:10px;}
+.order_detail li {width:100%;float:left;margin-bottom:5px;*margin-bottom:0;}
+.order_detail li label {width:115px;line-height:24px;float:left;color:#777777;}
+.order_detail li p {color:#777777;width:500px;float:left;line-height:24px;}
+.order_detail li p a {margin-left:5px;}
+.order_detail li:first-child p {color:#ff8800;*margin-top:2px;}
+.order_detail li:first-child label {color:#ff8800;}
+
+/*右侧内容*/
+.rightMain .orderMtop{height:50px;margin-bottom:2px;}
+
+.rightMain .orderMtop p {float:left;}
+.rightMain .orderMtop .orderMinfo {color:#999;margin-top:12px;float:left;/* margin-left:10px;*/ }
+/*取消订单样式*/
+.rightMain .cancel {background-color:#eff5fd;}
+.rightMain .cancel .oper {border-left:1px dashed #dde9f4;}
+
+
+/*goto mobile*/
+.goto_mobile{position: relative;width: 20px;height: 20px;margin:4px 5px 0 0;}
+.goto_mobile .litt_ew{display: block;width: 20px;height: 20px;background:url() no-repeat 0 -338px;padding: 0;cursor: pointer;}
+
+
+.goto_mobile .big_ersw{width:210px;padding:10px;height: 100px;position: absolute;border:1px solid #ccc;top:-5px;left:-205px;background: #fff;display:none;}
+.goto_mobile .big_ersw .litt_ew{position: absolute;display: block;top:5px;left:205px;}
+.goto_mobile .big_ersw img{float: left;}
+
+.goto_mobile .big_ersw .er_if{margin:20px 0 0 0;width:100px;float: left;padding:0 0 0 10px;}
+.goto_mobile .big_ersw p{line-height: 24px;font-size: 12px;color: #555;}

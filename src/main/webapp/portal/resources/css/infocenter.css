@@ -1,0 +1,34 @@
+.help_box { overflow: hidden;margin: 0px auto 50px auto;}	
+.layout { width: 1160px; margin: 0px auto; clear: both; margin-top: 20px;}
+.help_menu_box {width: 190px; float: left;  margin-right: 40px;}
+.help_menu_head {margin-bottom: 18px;}
+img, a img {  margin: 0px;  padding: 0px; border: 0px; font-size: 0px; line-height: 0px;}	
+.help_menu li {  height: 50px; margin-bottom: 1px; background-color: #d6d6d6;  line-height: 50px;}
+ul, li, ol, dt, dl, dd { list-style: none;}	
+a {  color: #4c4d4d;  text-decoration: none;  outline: none; cursor: pointer;}	
+.help_menu li a {  display: block; background: url(../images/help_arrow.png) 163px center no-repeat;  padding-left: 32px;  color: #6e6e6e;  font-size: 14px;}	
+.help_menu li:hover, .help_menu li.current {  background-color: #e93a34;}	
+.help_menu li:hover a, .help_menu li.current a {  color: #FFF;}	
+.help_cont_box { float: left;  width: 900px;}	
+.help_cont_titl { border-bottom: 1px solid #bdbdbd; height: 29px;  margin-top: 20px;}	
+.help_cont_titl h3 { font-size: 16px;  color: #5d5858; border-bottom: 2px solid #e94a34; height: 28px;  float: left;}
+.tariff_box { margin: 20px auto;}
+.tariff_titl { height: 40px;line-height: 40px; background-color: #e7e7e7;  margin-bottom: 10px;  padding-left: 15px;}
+.notice_cont { padding-top: 16px;overflow: hidden;}
+.notice_cont ul li { height: 50px; line-height: 50px; background: url(../images/notice_icon.png) 9px center no-repeat; padding-left: 27px; font-size: 14px; border-bottom: 1px dashed #c2c2c2;}
+.notice_cont ul li a { color: #727272;float: left;}
+.notice_cont ul li span { color: #858585; float: right;  margin-right: 20px;}
+.pagination-wrap { text-align: center;padding: 55px 0;}
+
+.subscribe-btn a{display:block; float:left;width:150px; height: 40px; line-height: 40px; text-align: center; font-size: 20px; color: #fff;  background: #ff6666; margin-left:160px;}
+.newsPage{float:right; margin:15px 35px}
+.news-1{width: 848px;margin: 0 auto;  background: #FFFFFF; padding:0 10px; float:left; border:1px solid #ccc; margin:10px 30px;}
+.NP{width:200px; height:150px; float:left;}
+.textBox{padding:20px; display:block; float:left; width:580px; float:left; display:block;}
+.textTitle{font-size:18px;}
+.newsInfor{float:right; margin-right:10px;}
+.newsAll{text-align:center; font-size:18px; line-height:40px; margin-bottom:5px; background-color:#ff6666; color:#fff; cursor:pointer;}
+.newsT{text-align:center; font-size:18px; line-height:40px; border-bottom:1px dashed #ccc;cursor:pointer;}
+.newsT a:hover{background-color:FF6666; color:#FFF; width:200px; padding:9px 64px;}
+.noticeT{text-align:center; font-size:18px; line-height:40px;cursor:pointer;}
+.noticeT a:hover{background-color:FF6666; color:#FFF; width:200px; padding:9px 64px;}

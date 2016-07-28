@@ -1,0 +1,35 @@
+1、调出弹出窗【pop_select.js】
+	  通过按钮调出(onclick),通告自身调出（focus）
+	  focus的这里没用到，不完善
+	  通告额外按钮click调出弹出窗函数
+	 
+	  /**
+ * 
+ * * @param event
+ *            其他方式调出弹出窗的事件
+ * @param title
+ *            弹出窗需要设置的名称
+ * @param url
+ *            弹出窗的URL
+ * @param Pop
+ *            弹出窗需要直接赋值的元素
+ * @param Close
+ *            关闭按钮
+ * @param Sub
+ *            确定按钮
+ * @param id
+ *            弹出窗需要赋值的树节点的id
+ * @param name
+ *            弹出窗需要赋值的树节点的name
+ * @param path
+ *            弹出窗需要赋值的树节点的path
+ * @param OpenEl 打开弹出窗的btn
+ * @return
+ */
+  showPopWindow(event, title, url, Pop, Close, Sub, id, name, path,OpenEl) 
+  openEl中保存着弹窗中树的选择方式=============
+  点击弹窗中确定按钮，返回值给id，name，path
+  选择树节点之后，确定按钮会保存选择的值
+  
+  每个树js函数中包含下面方法：
+  selectNodeNative(keyWord)，keyWord为openEl中保存的data-method

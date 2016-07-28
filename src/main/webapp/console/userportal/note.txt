@@ -1,0 +1,29 @@
+当前userPortal的布局和数据信息都是保存在一个当前window域的
+_cache_data全局变量当中，每次拖动和数据更改之后，都会对改变
+的元素做一个登记
+对应的_cache_data中的元素会增加属性
+_cache_data["content"][x][y]["_portlet_option"],或是update或是add
+对于删除的，要么直接从库中删除，要么假删除，假删除的数据会存在_cache_data["waitDelete"]当中
+...........
+
+还使用了localStorage，存在本地，每次登录判断本地是否存在，本地存在则从本地读取
+
+或者
+使用类似于session的sessionStorage，会话结束缓存就消失
+
+	数据缓存，用户配置
+	{inited:"是否已初始化",content:{"第几列":{"Y轴第几个":"userPortalBean"}},layout:{"第几列":[{"userPortalId":"###","y":"###"}]},columnLength:"有几个列"}
+	_cache_data["content"][columnIndex][yIndex]=userPortalBean;
+	_cache_data["layout"][columnIndex]=数组
+	
+			_cache_data = {
+			"inited" : false,// 是否初始化存在缓存
+			"content" : {},// 布局以及每列存放的元素
+			"layout" : {},// 布局存放信息，列以及存放的的userPortal的Id和y（非y的坐标，而是y上的排序）信息
+			"layoutStr" : {},// 布局信息，列和列宽
+			"columnLength" : 0,// 列的个数
+			"waitDelete" : [], // 待删除的userPortalData
+			"currentLayoutVal" : {}
+		// 当前布局的value值
+		};
+

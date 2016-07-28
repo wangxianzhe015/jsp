@@ -1,0 +1,419 @@
+.pos_r_title_subscribe{
+	height: 210px;
+	margin-top: 30px;
+	background: #fce2c8;
+	overflow: hidden;
+}
+.pos_r_title_subscribe p{
+	width: 1150px;
+	font-size: 14px;
+	line-height: 30px;
+	color: #f63;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.pos_r_title_subscribe p span{
+	font-size: 20px;
+	margin-left: 15px;
+	color: #f63;
+}
+
+.pos_r_title_subscribe b{
+	padding-left: 20px;
+  	line-height: 50px;
+  	font-size: 14px;
+  	color: #0066cc;
+  	font-weight: normal;
+}
+
+.pos_r_title_subscribe b input{
+	width: 15px;
+	height: 15px;
+	margin-right: 10px;
+}
+
+.user_tit_box{ 
+	padding:15px 0 5px 0px; 
+	border-bottom:1px solid #d2d2d2; 
+	position:relative; 
+}
+
+.user_tit_box .user_tit{ 
+	border-left:4px solid #9d0b0b; 
+	font-size:16px; 
+	padding-left:10px;
+}
+
+.user_tit_box .more_box{ 
+	position:absolute; 
+	right:0; 
+}
+
+.user_tit_box .more_box a{ 
+	display:inline-block; 
+	*display:inline; 
+	*zoom:1; 
+	overflow:hidden; 
+	padding:0 10px 7px 10px; 
+	color: #0066cc;
+	font-size: 18px; 
+	text-decoration:none;
+}
+
+.sub_cont{
+	height: 350px;
+	/*border: 1px solid #ccc;*/
+	margin-top: 10px;
+}
+
+.sub_cont .sub_cont_top{
+	height: 220px;
+	background: #ecf0f1;
+}
+.sub_cont_top dl{
+	width: 440px;
+	height: 160px;
+	margin-top: 23px;
+	margin-left: 25px;
+}
+.sub_cont_top dl dt{
+	width: 192px;
+	height: 160px;
+	background: #f63;
+	overflow: hidden;
+}
+
+.sub_cont_top dl dt img{
+	width: 100%;
+	height: 100%;
+}
+.sub_cont_top dl dd{
+	width: 230px;
+	text-align: left;
+	font-size: 22px;
+	color: #2b4c66;
+	line-height: 26px;
+}
+
+.sub_cont_top_r{
+	width: 700px;
+	height: 160px;
+	margin-top: 23px;
+	margin-right: 25px;
+
+}
+
+
+.sub_cont_top_r_num{
+	height: 80px;
+}
+
+.number{
+	color: #a7a7a7;
+	font-size: 24px;
+	line-height: 70px;
+}
+.number span{
+	font-weight: bold;
+	color: #333;
+	font-size: 20px;
+}
+
+.number a{
+	background: #fff;
+	color: #a7a7a7;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin: 20px 5px;
+}
+
+.inputVal{
+	height: 30px;
+	border: none;
+	margin: 20px 0px;
+	width: 45px;
+	text-align: center;
+}
+
+.yuan_fen{
+	font-size: 18px;
+	color: #a7a7a7;
+	line-height: 78px;
+	margin-left: 40px;
+}
+
+.yuan_fen span{
+	color: #f63;
+	padding: 0 5px;
+	font-weight: bold;
+}
+
+.form{
+	height: 80px;
+	line-height: 60px;
+	margin-left: 36px;
+}
+
+.form_top span{
+	font-size: 20px;
+}
+
+.form_top input{
+	width: 135px;
+	height: 28px;
+	margin: 15px 10px;
+	padding-left: 10px;
+}
+
+.form_top img{
+	width: 90px;
+	height: 28px;
+	margin: 15px 10px;
+}
+
+.form_top a{
+	font-size: 14px;
+}
+
+.codeTip{
+	padding-left: 76px;
+}
+
+.form_top a:hover{
+	color: #f63;
+}
+
+.sub_cont_bot{
+	text-align: center;
+}
+
+.p_sub_cont_bot{
+	text-align: center;
+	font-size: 20px;
+	line-height: 50px;
+}
+
+.p_sub_cont_bot b{
+	color: #333;
+}
+
+.p_sub_cont_bot span{
+	color: #f63;
+	padding: 0px 5px;
+	font-weight: bold;
+}
+
+.btn_sub_cont_bot{
+	background: #f63;
+	color: #fff;
+	font-size: 18px;
+	width: 150px;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+.btn_gray{
+	background: #AFA9A7;
+	color: #fff;
+	font-size: 18px;
+	width: 150px;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+/* 同步易宝弹窗 */
+#myModa_tongbuyb .modal-content{
+	background: #f7f7f7;
+}
+
+#myModa_tongbuyb .modal-header{
+	background: #f63;
+	border-radius: 6px;
+}
+
+#myModa_tongbuyb .modal-header h4{
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+}   
+
+#myModa_tongbuyb .modal-body img{
+	display: block;
+	margin:0 auto;
+	padding: 20px 0px;
+}
+
+#myModa_tongbuyb .modal-body p{
+	margin:0 auto;
+	color: #595959;
+	font-size: 14px;
+	line-height: 28px;
+}
+
+#myModa_tongbuyb .modal-body p span{
+	margin-right: 20px;
+	font-weight: bold;
+	margin-left: 146px;
+}
+
+#myModa_tongbuyb .modal-body .modal_btn{
+	width: 277px; ;
+	margin:0 auto;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#myModa_tongbuyb .modal-body .modal_btn button{
+	width: 120px;
+	height: 34px;
+	font-size: 18px;
+	display: inline-block;
+}
+
+
+/* 自动授权弹窗 */
+#myModa_zidongsq .modal-content{
+	background: #f7f7f7;
+}
+
+#myModa_zidongsq .modal-header{
+	background: #f63;
+	border-radius: 6px;
+}
+
+#myModa_zidongsq .modal-header h4{
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+}   
+
+#myModa_zidongsq .modal-body img{
+	display: block;
+	margin:0 auto;
+	padding: 20px 0px;
+}
+
+#myModa_zidongsq .modal-body p{
+	width: 240px;
+	margin:0 auto;
+	color: #595959;
+	font-size: 14px;
+	line-height: 28px;
+}
+
+#myModa_zidongsq .modal-body p span{
+	margin-right: 20px;
+	font-weight: bold;
+}
+
+#myModa_zidongsq .modal-body .modal_btn{
+	width: 277px; ;
+	margin:0 auto;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#myModa_zidongsq .modal-body .modal_btn button{
+	width: 120px;
+	height: 34px;
+	font-size: 18px;
+	display: inline-block;
+}
+
+/* 完善个人信息弹窗 */
+
+#myModa_wanshanxx .modal-content{
+	background: #f7f7f7;
+}
+
+#myModa_wanshanxx .modal-header{
+	background: #f63;
+	border-radius: 6px;
+}
+
+#myModa_wanshanxx .modal-header h4{
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+}   
+
+#myModa_wanshanxx .modal-body img{
+	display: block;
+	margin:0 auto;
+	padding: 20px 0px;
+	padding-bottom: 10px;
+}
+
+#myModa_wanshanxx .modal-body button{
+	width: 120px;
+	height: 34px;
+	font-size: 18px;
+	margin:0 223px;
+	margin-bottom: 20px;
+}
+
+#myModa_wanshanxx .modal-body .modal_form{
+	width: 380px;
+	margin: 0 auto;
+}
+
+
+#myModa_wanshanxx .modal-body .modal_form .form_div{
+	height: 30px;
+	margin: 10px 0px;
+}
+
+#myModa_wanshanxx .modal-body .modal_form .form_div span{
+	float: left;
+	width: 70px;
+	text-align: right;
+	font-size: 14px;
+	color: #404040;
+	line-height: 30px;
+	margin-right: 10px;
+}
+
+#myModa_wanshanxx .modal-body .modal_form .form_div input{
+	height: 28px;
+	border: 1px solid #ccc;
+	width: 287px;
+	line-height: 28px;
+	padding-left: 10px;
+}
+
+#myModa_wanshanxx .modal-body .modal_form .form_div  input.modal_yzm{
+	width: 160px;
+	float: left;
+}
+
+
+#myModa_wanshanxx .modal-body .modal_form .form_div  button.modal_yzm_btn{
+	float: right;
+	margin:0;
+	height: 30px;
+	border: none;
+	background: #bebebe;
+	font-size: 14px;
+	color: #424242;
+	cursor: pointer;
+}
+
+
+#myModa_wanshanxx .modal-body .modal_form .modeltip{
+	margin-left: 80px;
+}
+
+#myModa_wanshanxx .modal-body .model_tishi{
+	line-height: 60px;
+	height: 60px;
+	text-align: center;
+	color: #c00e0e;
+}

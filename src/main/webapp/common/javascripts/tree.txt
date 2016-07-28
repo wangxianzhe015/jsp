@@ -1,0 +1,54 @@
+initEntityTree(initId, groupId, showTreeMethod, showEl, url,memo);
+
+<a href="javascript:void(0);" id="selectOrg" class="button"
+									data-method="singleNoCheck">选择</a>
+
+在选择树的按钮上加上
+data-method属性，
+	switch (showTreeMethod) {
+	case 'singleNoCheck':
+		return singleCheckOptionsNoCheck;
+	case 'singleWithCheck':
+		return singleCheckOptions;
+	case 'multiNoChild':
+		return multiSelectOptionsN;
+	case 'multiWithChild':
+		return multiSelectOptionsY;
+	default:
+		return $j.extend( {
+			clickFolderMode : 1// 1:activate, 2:expand, 3:activate and expand
+		}, singleCheckOptionsNoCheck);
+
+	}
+		
+		取值方式
+	1、var selectedItems = $j("span.dynatree-selected").children("a");//checkbox
+	2、var selectedItems = $j("span.dynatree-active").children("a");// noCheckbox
+	
+	
+	
+	同一个树的js可能被不同的逻辑给调用，但显示方式都在同一个js中，因此调用树的js的id名称目前写死id
+	
+	
+	每个js当中写两个获取值的方法：active和select两个状态
+	//dynatree=常用API
+	node.setTitle();
+	node.span;
+	node.tree
+	node.data.title="",node.render();=node.setTitle();
+	tree,redraw();
+	$.ui.dynatree=tree|||||$.ui.dynatree.getNode(eventTarget);
+	tree.visit(calls,if包含root);
+	node.visit(calls[所有的子节点],if包含自己);
+	
+	node.visitParents(fn, includeSelf);//Call fn(node) for all parent nodes.Stop iteration, if fn(node) returns false.
+	
+	
+	
+树的节点的api
+	node.isChildOf(otherNode)//是否是某节点的子节点
+			Return true, if this node is a direct child of otherNode.
+	node.isDescendantOf(otherNode)//是否是某节点的后代节点
+			Return true, if this node is a descendent (direct or indirect child) of otherNode.	
+	
+											

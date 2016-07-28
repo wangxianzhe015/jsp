@@ -1,0 +1,19 @@
+###############适用于一对多或者多对一关系的表格的显示
+js:module_gridTable.js
+中的方法：
+cosplanTable(tableName,[cols])
+tableName必须，cols可有可无.
+
+***首先给table加上id，比如id=cosplanTable
+
+
+//描述：
+tableName是需要合并字段的table的ID
+cols是需要合并前几列
+//如果只要一个参数tableName，那么需要在表格的th当中指定哪一列需要合并，加上class="cosplan"，eg：	
+<th class="cosplan">角色名称</th>
+//如果两个参数，那么不需要指定class="cosplan",函数会自动强制合并前cols列
+
+
+=====================
+表格合并哪几列，后台的sql最好根据列名进行group by 或者order by操作进行匹配

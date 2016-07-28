@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<listener>
+      <listener-class>com.smartcloud.platform.component.mvc.framework.FrameworkContextLoader</listener-class>
+   </listener>
+   
+	<servlet>
+        <servlet-name>platformServlet</servlet-name>
+        <servlet-class>com.smartcloud.platform.component.mvc.framework.PlatformServletDispatcher</servlet-class>
+        <init-param>
+            <!-- 设置当前服务配置主目录,默认.表示当前目录/WEB-INF/server -->
+	        <param-name>server_home</param-name>
+	        <param-value>.</param-value>
+	   </init-param>
+	   <init-param>
+	        <!-- 指定存储类仓库的class前缀 -->
+	        <param-name>repository_class_prefixs</param-name>
+	        <param-value>com.smartcloud,com.dingy</param-value>
+	   </init-param>
+        <init-param>
+	        <param-name>login_page_url</param-name>
+	        <param-value>/login.jsp</param-value>
+	   </init-param>
+        <init-param>
+	        <param-name>error_page_url</param-name>
+	        <param-value>/error.jsp</param-value>
+	   </init-param>
+        <init-param>
+	        <param-name>portal_mode</param-name>
+	        <param-value>true</param-value>
+	   </init-param>
+	   
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>platformServlet</servlet-name>
+        <url-pattern>/platform/*</url-pattern>
+    </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>WSServlet</servlet-name>
+    <servlet-class>com.smartcloud.platform.component.webservice.WebServiceServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>WSServlet</servlet-name>
+    <url-pattern>/webservice/*</url-pattern>
+  </servlet-mapping>
+  
+	<jsp-config>    
+	    <jsp-property-group>      
+	        <display-name>JSPConfiguration</display-name>    
+	        <url-pattern>*.html</url-pattern>    
+	        <el-ignored>true</el-ignored>    
+	        <page-encoding>UTF-8</page-encoding>    
+	        <scripting-invalid>false</scripting-invalid>    
+	        <include-prelude></include-prelude>    
+	        <include-coda></include-coda>    
+	    </jsp-property-group>    
+	</jsp-config>  
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+</web-app>

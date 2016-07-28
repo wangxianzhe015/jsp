@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence>
+<!-- 配置default数据源 -->
+    <persistence-unit name="default">
+        <jta-data-source>java:/DefaultDataSource</jta-data-source>
+        <properties>
+            <property name="datasource.jdbc.driver" value="com.mysql.jdbc.Driver"/> <!-- for mysql-->
+            <property name="datasource.jdbc.url" value="jdbc:mysql://127.5.150.2:3306/cap"/>
+           
+            <property name="datasource.jdbc.username" value="adminHEIVT8Q"/>
+            <property name="datasource.jdbc.password" value="uh2TFDBWYabr"/>
+
+			<property name="datasource.jdbc.resultset.maxrows" value="1000"/>
+			
+            <property name="datasource.pool.minsize" value="1"/>
+            <!-- max pool size -->
+            <property name="datasource.pool.maxsize" value="200"/>
+            <!-- connection max idle time, in second -->
+            <property name="datasource.pool.maxidle" value="600000"/>
+            <property name="datasource.pool.connecttimeout" value="120"/>
+            
+            <!-- check connection closed -->
+            <property name="cache.type" value="local"/> <!-- local/memcached/local+memcached/terrecotta -->
+            <property name="cache.local.maxSize" value="1000"/>
+            <!-- max size for "default" -->
+            <!--<property name="cache.maxMemorySize" value="100000000"/>-->
+            <!-- max memory size for "default", in bytes-->
+            <property name="cache.local.evict" value="LRU"/>
+            <!-- algorithm for "default" cache category, LRU, LFU, FIFO-->
+            <property name="cache.local.ttl" value="600000"/>
+            <!-- ttl for "default", in ms-->
+            <property name="cache.local.maxIdleTime" value="300000"/>
+            <!-- maxidletime for "default", in ms-->
+			<!-- 
+            <property name="cache.memcached.servers" value="201.4.1.163:11211,201.4.1.168:11212"/>
+             -->
+            <property name="cache.cluster.clustered" value="true" />
+	        <!--
+	           	缓存模式:
+	           	1)LOCAL 本地缓存
+	           	2)INVALIDATION_SYNC 同步使无效
+	           	3)REPL_SYNC 同步复制
+	           	4)INVALIDATION_ASYNC 异步使无效
+	           	5)REPL_ASYNC 异步复制
+	         -->
+	         <!-- 
+            <property name="cache.cluster.mode" value="INVALIDATION_SYNC" />
+             -->
+        </properties>
+
+    </persistence-unit>
+
+</persistence>

@@ -1,0 +1,259 @@
+@charset "utf-8";
+.z_container {
+    width: 1000px;
+    margin: 0 auto;
+}
+.order_process {
+    border: 1px solid #e9e5e6;
+    height: 37px;
+    line-height: 37px;
+    background: #f4f4f4;
+    font-family: 'microsoft yahei';
+    font-size: 14px;
+    width: 1000px;
+}
+.order_process ul {
+    position: relative;
+    height: 37px;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+}
+.order_process li {
+    width: 25%;
+    position: relative;
+    text-align: center;
+    float: left;
+    z-index: 0;
+}
+.order_process li.active .order_ahead_arrow {
+    background-position: top;
+}
+.order_process li.active .order_behind_arrow {
+    background-position: bottom;
+    left: -19px;
+}
+.order_process li .order_arrow {
+    width: 19px;
+    height: 37px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -17px;
+    background: url(../images/order_arrow.png) 0 -40px no-repeat;
+    z-index: 0;
+}
+.order_process li.active {
+    background: #fda6a3;
+    color: #fff;
+}	
+
+.module_wrap {
+    border: 1px solid #dedbdb;
+    background: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+}
+.mt20 {
+    margin-top: 20px;
+}
+
+.common_tit {
+    height: 59px;
+    line-height: 59px;
+    background: #fafafa;
+    border-bottom: 1px solid #dedbdb;
+}
+.common_tit .icon_ok {
+    background: url(../images/icons.png) 0 -128px no-repeat;
+    width: 30px;
+    height: 22px;
+    padding: 0 40px;
+    margin-left: 20px;
+    display: inline;
+}
+.common_tit .common_tit_name {
+    font-size: 22px;
+    font-family: 'microsoft yahei';
+    padding: 0 40px;
+    font-weight: normal;
+    color: #444;
+}
+.module_con {
+    color: #666;
+}
+.module_item {
+    border-bottom: 1px dashed #e3e3e3;
+    padding: 10px 0;
+}
+.module_con dl {
+    padding: 5px 0 5px 100px;
+    line-height: 24px;
+    margin: 0 20px;
+    min-height: 24px;
+    _height: 24px;
+}
+.module_con dl dt {
+    margin-left: -95px;
+    float: left;
+    width: 85px;
+    text-align: right;
+    color: #333;
+    font-weight: bold;
+    _display: inline;
+}
+.clearfix {
+    display: inline-table;
+    display: block;
+    zoom: 1;
+}
+li {
+	display: list-item;
+    list-style-type: none;
+}
+button, dd, div, dl, dt, form, img, input, li, ol, p, td, th, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+button, dd, div, dl, dt, form, img, input, li, ol, p, td, th, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+dd {
+    display: block;
+    -webkit-margin-start: 40px;
+}
+.table01 {
+    width: 930px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #eee;
+}
+.mt20 {
+    margin-top: 20px;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.table01 thead th {
+    height: 35px;
+    background: #eee;
+    text-align: left;
+    padding-left: 10px;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.table01 tbody tr td {
+    height: 50px;
+    text-align: left;
+    padding-left: 10px;
+}
+.f_red {
+    color: #f35d5d;
+}
+.default_txt {
+    padding-top: 20px;
+    margin-top: -20px;
+}
+.pr {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.hover_div {
+    border: 1px solid #7bc0e0;
+    background: #FFF;
+    border-radius: 4px;
+    padding: 20px;
+    width: 360px;
+    z-index: 11;
+    position: absolute;
+    top: -100px;
+    -webkit-box-shadow: #d1d1d1 1px 1px 2px;
+    -moz-box-shadow: #d1d1d1 1px 1px 2px;
+    box-shadow: #d1d1d1 1px 1px 2px;
+}
+
+.hover_div .icon_upb {
+    background: url(../images/icons.png) -100px -31px no-repeat;
+    position: absolute;
+    width: 27px;
+    height: 13px;
+    left: 50%;
+    top: 100%;
+}
+
+.total930 {
+    width: 930px;
+    text-align: right;
+    margin: 30px 35px 0 35px;
+}
+.f_gery14 {
+    font-size: 14px;
+    color: #666;
+    font-family: "Microsoft Yahei";
+}
+.f_red28 {
+    font-size: 28px;
+    font-family: Arial;
+    color: #ed5e58;
+}
+.common_button {
+    text-align: center;
+    padding: 24px 0;
+}
+.common_button button {
+    width: 100px;
+    height: 38px;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";
+    background: #ff6559;
+    text-decoration: none;
+    border-radius: 4px;
+    line-height: 38px;
+    text-align: center;
+    display: inline-block;
+    color: #FFF;
+    cursor: pointer;
+}
+.common_button .btn_grey {
+    width: 100px;
+    height: 38px;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";
+    background: #e7e7e7;
+    text-decoration: none;
+    border-radius: 4px;
+    line-height: 38px;
+    text-align: center;
+    color: #666;
+    margin: 0 5px;
+}
+
+input {
+    font-size: 12px;
+    vertical-align: middle;
+    color: #333;
+    outline: 0;
+}
+
+body.page-header {
+    background: #f3f3f3;
+}

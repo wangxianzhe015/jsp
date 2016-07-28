@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<service-consumer>
+    <RegistryConfig>
+         <property name="address" value="N/A" />
+         <property name="username" value="" />
+         <property name="password" value="" />
+    </RegistryConfig>
+    
+    <ReferenceConfig>
+        <reference interface="" providerUrl="" version=""/>
+    </ReferenceConfig>
+    
+</service-consumer>

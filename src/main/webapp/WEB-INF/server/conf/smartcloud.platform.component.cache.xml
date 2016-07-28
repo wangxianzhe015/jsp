@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cache-config>
+    <cache name="DictionaryCache">
+        <!-- 
+        	缓存数据加载器,实现接口com.smartcloud.platform.component.cache.spi.CacheLoader 
+        -->
+        <property name="cacheLoader" value="com.smartcloud.platform.component.mvc.web.dict.support.DictionaryCacheLoader"/>
+        <!--
+        	缓存提供者实现:
+          1)com.smartcloud.platform.component.cache.support.hashmap.HashMapCacheProvider(默认)
+          2)com.smartcloud.platform.component.cache.support.ehcache.EHCacheProvider
+          3)com.smartcloud.platform.component.cache.support.xmemcached.XmemcachedProvider
+             set xmemcached.addrs: <property name="xmemcached.addrs" value="localhost:11211" />
+          4)com.smartcloud.platform.component.cache.support.redis.RedisCacheProvider
+             set redis.addrs:<property name="redis.addrs" value="master:192.168.126.133:6379 slave:192.168.126.133:6803"/>
+        -->
+        <property name="cacheProvider" value="com.smartcloud.platform.component.cache.support.hashmap.HashMapCacheProvider"/>
+        <!--
+           	缓存模式:
+           	1)LOCAL 本地缓存
+           	2)INVALIDATION_SYNC 同步使无效
+           	3)REPL_SYNC 同步复制
+           	4)INVALIDATION_ASYNC 异步使无效
+           	5)REPL_ASYNC 异步复制
+         -->
+        <property name="cacheMode" value="LOCAL"/>
+       	<!-- 
+       	          缓存在内存中保留最大个数，maxElementsInMemory
+       	 -->
+       	<property name="maxElementsInMemory" value="20000"/>
+       	<!-- 
+       	         超时清除缓存:
+       	         以创建时间为基准开始计算的超时时长
+       	 -->
+       	<property name="timeToLiveSeconds" value="0"/>
+       	<!-- 
+       	        超时清除缓存:
+       	        在创建时间和最近访问时间中取出离现在最近的时间作为基准计算的超时时长
+       	 -->
+       	<property name="timeToIdleSeconds" value="0"/>
+        <!--
+        	是否集群 (true/false)
+         -->
+         <property name="isClustered" value="false"/>
+        <!-- 
+        	缓存数据监听器,实现接口 com.smartcloud.platform.component.cache.spi.CacheModificationListener 
+        -->
+        <property name="cacheModificationListener" value=""/>
+    </cache>
+    <cache name="CityDictionaryCache">
+        <!-- 
+        	缓存数据加载器,实现接口com.smartcloud.platform.component.cache.spi.CacheLoader 
+        -->
+        <property name="cacheLoader" value="com.smartcloud.crowdfunding.portal.dict.CityDictionaryCacheLoader"/>
+        <!--
+        	缓存提供者实现:
+          1)com.smartcloud.platform.component.cache.support.hashmap.HashMapCacheProvider(默认)
+          2)com.smartcloud.platform.component.cache.support.ehcache.EHCacheProvider
+          3)com.smartcloud.platform.component.cache.support.xmemcached.XmemcachedProvider
+             set xmemcached.addrs: <property name="xmemcached.addrs" value="localhost:11211" />
+          4)com.smartcloud.platform.component.cache.support.redis.RedisCacheProvider
+             set redis.addrs:<property name="redis.addrs" value="master:192.168.126.133:6379 slave:192.168.126.133:6803"/>
+        -->
+        <property name="cacheProvider" value="com.smartcloud.platform.component.cache.support.ehcache.EHCacheProvider"/>
+        <!--
+           	缓存模式:
+           	1)LOCAL 本地缓存
+           	2)INVALIDATION_SYNC 同步使无效
+           	3)REPL_SYNC 同步复制
+           	4)INVALIDATION_ASYNC 异步使无效
+           	5)REPL_ASYNC 异步复制
+         -->
+        <property name="cacheMode" value="LOCAL"/>
+       	<!-- 
+       	          缓存在内存中保留最大个数，maxElementsInMemory
+       	 -->
+       	<property name="maxElementsInMemory" value="10000"/>
+       	<!-- 
+       	         超时清除缓存:
+       	         以创建时间为基准开始计算的超时时长
+       	 -->
+       	<property name="timeToLiveSeconds" value="12000"/>
+       	<!-- 
+       	        超时清除缓存:
+       	        在创建时间和最近访问时间中取出离现在最近的时间作为基准计算的超时时长
+       	 -->
+       	<property name="timeToIdleSeconds" value="12000"/>
+        <!--
+        	是否集群 (true/false)
+         -->
+         <property name="isClustered" value="false"/>
+        <!-- 
+        	缓存数据监听器,实现接口 com.smartcloud.platform.component.cache.spi.CacheModificationListener 
+        -->
+        <property name="cacheModificationListener" value=""/>
+    </cache>
+    
+    <cache name="ProjectCategoryDictionaryCache">
+        <!-- 
+        	缓存数据加载器,实现接口com.smartcloud.platform.component.cache.spi.CacheLoader 
+        -->
+        <property name="cacheLoader" value="com.smartcloud.crowdfunding.portal.dict.ProjectCategoryCacheLoader"/>
+        <!--
+        	缓存提供者实现:
+          1)com.smartcloud.platform.component.cache.support.hashmap.HashMapCacheProvider(默认)
+          2)com.smartcloud.platform.component.cache.support.ehcache.EHCacheProvider
+          3)com.smartcloud.platform.component.cache.support.xmemcached.XmemcachedProvider
+             set xmemcached.addrs: <property name="xmemcached.addrs" value="localhost:11211" />
+          4)com.smartcloud.platform.component.cache.support.redis.RedisCacheProvider
+             set redis.addrs:<property name="redis.addrs" value="master:192.168.126.133:6379 slave:192.168.126.133:6803"/>
+        -->
+        <property name="cacheProvider" value="com.smartcloud.platform.component.cache.support.ehcache.EHCacheProvider"/>
+        <!--
+           	缓存模式:
+           	1)LOCAL 本地缓存
+           	2)INVALIDATION_SYNC 同步使无效
+           	3)REPL_SYNC 同步复制
+           	4)INVALIDATION_ASYNC 异步使无效
+           	5)REPL_ASYNC 异步复制
+         -->
+        <property name="cacheMode" value="LOCAL"/>
+       	<!-- 
+       	          缓存在内存中保留最大个数，maxElementsInMemory
+       	 -->
+       	<property name="maxElementsInMemory" value="10000"/>
+       	<!-- 
+       	         超时清除缓存:
+       	         以创建时间为基准开始计算的超时时长
+       	 -->
+       	<property name="timeToLiveSeconds" value="12000"/>
+       	<!-- 
+       	        超时清除缓存:
+       	        在创建时间和最近访问时间中取出离现在最近的时间作为基准计算的超时时长
+       	 -->
+       	<property name="timeToIdleSeconds" value="12000"/>
+        <!--
+        	是否集群 (true/false)
+         -->
+         <property name="isClustered" value="false"/>
+        <!-- 
+        	缓存数据监听器,实现接口 com.smartcloud.platform.component.cache.spi.CacheModificationListener 
+        -->
+        <property name="cacheModificationListener" value=""/>
+    </cache>    
+ 
+    <cache name="SystemConfigurationDictionaryCache">
+        <!-- 
+        	缓存数据加载器,实现接口com.smartcloud.platform.component.cache.spi.CacheLoader 
+        -->
+        <property name="cacheLoader" value="com.smartcloud.crowdfunding.portal.dict.SystemConfigurationCacheLoader"/>
+        <!--
+        	缓存提供者实现:
+          1)com.smartcloud.platform.component.cache.support.hashmap.HashMapCacheProvider(默认)
+          2)com.smartcloud.platform.component.cache.support.ehcache.EHCacheProvider
+          3)com.smartcloud.platform.component.cache.support.xmemcached.XmemcachedProvider
+             set xmemcached.addrs: <property name="xmemcached.addrs" value="localhost:11211" />
+          4)com.smartcloud.platform.component.cache.support.redis.RedisCacheProvider
+             set redis.addrs:<property name="redis.addrs" value="master:192.168.126.133:6379 slave:192.168.126.133:6803"/>
+        -->
+        <property name="cacheProvider" value="com.smartcloud.platform.component.cache.support.ehcache.EHCacheProvider"/>
+        <!--
+           	缓存模式:
+           	1)LOCAL 本地缓存
+           	2)INVALIDATION_SYNC 同步使无效
+           	3)REPL_SYNC 同步复制
+           	4)INVALIDATION_ASYNC 异步使无效
+           	5)REPL_ASYNC 异步复制
+         -->
+        <property name="cacheMode" value="LOCAL"/>
+       	<!-- 
+       	          缓存在内存中保留最大个数，maxElementsInMemory
+       	 -->
+       	<property name="maxElementsInMemory" value="10000"/>
+       	<!-- 
+       	         超时清除缓存:
+       	         以创建时间为基准开始计算的超时时长
+       	 -->
+       	<property name="timeToLiveSeconds" value="0"/>
+       	<!-- 
+       	        超时清除缓存:
+       	        在创建时间和最近访问时间中取出离现在最近的时间作为基准计算的超时时长
+       	 -->
+       	<property name="timeToIdleSeconds" value="0"/>
+        <!--
+        	是否集群 (true/false)
+         -->
+         <property name="isClustered" value="false"/>
+        <!-- 
+        	缓存数据监听器,实现接口 com.smartcloud.platform.component.cache.spi.CacheModificationListener 
+        -->
+        <property name="cacheModificationListener" value=""/>
+    </cache>      
+</cache-config>

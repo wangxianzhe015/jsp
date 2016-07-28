@@ -1,0 +1,90 @@
+/* Generic context menu styles */
+.contextMenu {
+	position: absolute;
+	width: 150px;
+	z-index: 99999;
+	border: solid 1px #aca899;
+	background: #fff;
+	padding: 1px;
+	margin: 0px;
+	display: none;
+}
+
+.contextMenu LI {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.contextMenu A {
+	color: #333;
+	text-decoration: none;
+	display: block;
+	line-height: 20px;
+	height: 20px;
+	background-position: 6px center;
+	background-repeat: no-repeat;
+	outline: none;
+	padding: 1px 5px;
+	padding-left: 28px;
+}
+
+.contextMenu LI.hover A {
+	color: #FFF;
+	/*background-color: #1c5ea0;*/
+	background-color: #316ac5;
+}
+
+.contextMenu LI.disabled A {
+	color: #AAA;
+	cursor: default;
+}
+
+.contextMenu LI.hover.disabled A {
+	background-color: transparent;
+}
+
+.contextMenu LI.separator {
+	border-top: solid 1px #CCC;
+}
+
+/**自定义样式(图片)**/
+.contextMenu LI.edit A {
+	background-image: url(images/page_white_edit.png);
+}
+
+.contextMenu LI.cut A {
+	background-image: url(images/cut.png);
+}
+
+.contextMenu LI.copy A {
+	background-image: url(images/page_white_copy.png);
+}
+
+.contextMenu LI.paste A {
+	background-image: url(images/page_white_paste.png);
+}
+
+.contextMenu LI.gear A {
+	background-image: url(images/gear.png);
+}
+
+.contextMenu LI.delete A {
+	background-image: url(images/page_white_delete.png);
+}
+
+.contextMenu LI.quit A {
+	background-image: url(images/door.png);
+}
+
+.contextMenu LI.detail A {
+	background-image: url(images/detail.png);
+}
+
+.contextMenu LI.zoom A {
+	background-image: url(images/zoom.png);
+}
+
+.contextMenu LI.refresh A {
+	background-image: url(images/refresh.png);
+}
